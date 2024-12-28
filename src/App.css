@@ -1,32 +1,67 @@
-input{
+#input{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 10px;
+}
+#locate{
     position: relative;
+}
+input{
     width: 100%;
     height: 40px;
-    border-radius: 5px;
-    border: none;
-    padding: 5px 0;
+    border-radius: var(--borderRadius);
+    border: solid 1.5px #aaa;
+    padding: 3px 0;
     line-height: normal;
     font-size: 20px;
     outline: none;
-    text-indent: 50px;
+    text-indent: 20px;
+    margin-bottom: 25px;
+
+    &:hover {
+        border: solid 1.5px rgb(0, 115, 255);
+    }
+    &:focus {
+        border: solid 1.5px rgb(0, 115, 255);
+    }
 }
-#buttonTitle{
+.buttonTitle{
     position: absolute;
-    right: 190px;
-    top: 90px;
+    top: 2.4px;
+    right: -8px;
     width: 80px;
     height: 40px;
-    border-radius: 5px;
+    border-radius: var(--borderRadius);
     border: none;
     cursor: pointer;
-    background-color: rgb(236, 149, 18);
-    color: rgb(37, 136, 1);
-    display: inline-flex; 
+    background-color: rgb(0, 115, 255);
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    display: flex;
+    font-size: 15px;
+    text-align: center;
     justify-content: center;
-    align-items: center;
-    /* text-align: center; */
 }
 
-#buttonTitle:hover {
-    background-color: #b25d0e;
+
+.buttonTitle:disabled {
+    background-color: #f0f0f0;
+    color: #aaa;
+    cursor: not-allowed;
 }
+
+.buttonTitle:hover:not(:disabled) {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.buttonDelete {
+    position: absolute;
+    top: 2.4px;
+    right: -95px;
+    width: 80px;
+    height: 40px;
+}
+
+.react-datepicker-popper {
+    transform: translate(127px, 50px) !important; /* Đẩy lịch xuống dưới icon */
+    z-index: 9999; /* Đảm bảo lịch hiển thị trên các thành phần khác */
+  }

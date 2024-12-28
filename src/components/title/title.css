@@ -1,8 +1,8 @@
 h1{
     display: inline-block;
-    float: left;
-    color: rgb(37, 136, 1);
-    border-radius: 40px;
+    text-align: center;
+    width: 100%;
+    color: rgb(0, 115, 255);
     text-align: center;
     padding: 15px 0;
     font-size: 30px;
